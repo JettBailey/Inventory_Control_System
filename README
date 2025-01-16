@@ -2,3 +2,9 @@ B.  Create a README file that includes notes describing where in the code to fin
 Each note should include the prompt, file name, line number, and change.
 
     README file, file, created README file for part B
+
+
+C - Customize the HTML user interface for your customer’s application. The user interface should include the shop name, the product names, and the names of the parts.
+
+    1. mainscreen.html, line 14: Renamed "My Bicycle Shop" to "My Furniture Shop"
+    2. mainscreen.html, line 19: Renamed "Shop" to "Furniture Shop"

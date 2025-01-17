@@ -8,3 +8,15 @@ C - Customize the HTML user interface for your customer’s application. The use
 
     1. mainscreen.html, line 14: Renamed "My Bicycle Shop" to "My Furniture Shop"
     2. mainscreen.html, line 19: Renamed "Shop" to "Furniture Shop"
+
+
+D - Add an “About” page to the application to describe your chosen customer’s company to web viewers and include navigation to and from the “About” page and the main screen.
+
+    1. about.html, file, added the about.html file to create the "About Us" page
+    2. about.html, line 5, changed the title tag from "Title" to "About Us"
+    3. about.html, line 9, added in h1 tag for a title on the About Us page that reads "The Furniture Shop Story"
+    4. about.html, line 10, added in h3 tag for some content
+    5. AboutUsController, file, added a Java class to act as the controller for the about html file
+    6. AboutUsController, lines 7-15, added in the correct mapping to call about.html
+    7. about.html, line 8, added in th:href that redirects to home page
+    8. mainscreen.html, line 17, added in th:href that redirects to the about page

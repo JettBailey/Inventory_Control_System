@@ -40,6 +40,8 @@ public class BootStrapData implements CommandLineRunner {
         DoorKnob.setInv(25);
         DoorKnob.setPrice(10.0);
         DoorKnob.setId(1000L);
+        DoorKnob.setMinInv(0);
+        DoorKnob.setMaxInv(50);
         outsourcedPartRepository.save(DoorKnob);
 
         OutsourcedPart hinge= new OutsourcedPart();
@@ -48,6 +50,8 @@ public class BootStrapData implements CommandLineRunner {
         hinge.setInv(55);
         hinge.setPrice(5.0);
         hinge.setId(1001L);
+        hinge.setMinInv(0);
+        hinge.setMaxInv(50);
         outsourcedPartRepository.save(hinge);
 
         OutsourcedPart dowel = new OutsourcedPart();
@@ -56,6 +60,8 @@ public class BootStrapData implements CommandLineRunner {
         dowel.setInv(450);
         dowel.setPrice(0.10);
         dowel.setId(1002L);
+        dowel.setMinInv(0);
+        dowel.setMaxInv(50);
         outsourcedPartRepository.save(dowel);
 
         OutsourcedPart handle = new OutsourcedPart();
@@ -64,6 +70,8 @@ public class BootStrapData implements CommandLineRunner {
         handle.setInv(20);
         handle.setPrice(3.0);
         handle.setId(1003L);
+        handle.setMinInv(0);
+        handle.setMaxInv(50);
         outsourcedPartRepository.save(handle);
 
         OutsourcedPart plank = new OutsourcedPart();
@@ -72,6 +80,8 @@ public class BootStrapData implements CommandLineRunner {
         plank.setInv(74);
         plank.setPrice(17.0);
         plank.setId(1004L);
+        plank.setMinInv(0);
+        plank.setMaxInv(50);
         outsourcedPartRepository.save(plank);
 
         OutsourcedPart thePart=null;

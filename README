@@ -53,3 +53,32 @@ F. Add a “Buy Now” button to your product list. Your “Buy Now” button mu
    5. mainscreen.html, line 94, Added in the code that will display the message after the "Buy Now" button is pressed
    6. MainScreenController.java, line 70 & 73, adding in a status status that will allow me to have the successful purchase be green and a failure be red
    7. mainscreen.html, line 94-111, Added in a css class that will make the status message green or red depending on what the status message from the controller is
+
+G. Modify the parts to track maximum and minimum inventory by doing the following:
+   •  Add additional fields to the part entity for maximum and minimum inventory.
+   •  Modify the sample inventory to include the maximum and minimum fields.
+   •  Add to the InhousePartForm and OutsourcedPartForm forms additional text inputs for the inventory so the user can set the maximum and minimum values.
+   •  Rename the file the persistent storage is saved to.
+   •  Modify the code to enforce that the inventory is between or at the minimum and maximum value.
+
+   1. Part.java, line 32-33, added minInv field
+   2. Part.java, line 34-35, added maxInv field
+   3. Part.java, line 59-63, added new Part Constructor
+   4. Part.java, line 97, added new setter setMinInv
+   5. Part.java, line 99, added new getter getMinInv
+   6. Part.java, line 101, added new setter setMaxInv
+   7. Part.java, line 103, added new getter getMaxInv
+   8. BootStrapData.java, line 43-44, added in setMinValue and setMaxValue to part "DoorKnob"
+   9. BootStrapData.java, line 53-54, added in setMinValue and setMaxValue to part "hinge"
+   10. BootStrapData.java, line 63-64, added in setMinValue and setMaxValue to part "dowel"
+   11. BootStrapData.java, line 73-74, added in setMinValue and setMaxValue to part "handle"
+   12. BootStrapData.java, line 83-84, added in setMinValue and setMaxValue to part "plank"
+   13. InhousePartForm.html, line 24-25, added text inputs for minInv
+   14. InhousePartForm.html, line 27-28, added text inputs for maxInv
+   15. OutsourcedPartForm.html, line 25-26, added text inputs for minInv
+   16. OutsourcedPartForm.html, line 28-29, added text inputs for maxInv
+   17. Renamed physical database file from "spring-boot-h2-db.mv.db" to "d287_test.db"
+   18. application.properties, line 6, Renamed database file pointer from "spring-boot-h2-db.mv.db" to "d287_test.db"
+   19. Part.java, 64-66, Added in a method to check if the inventory is within the min and max values
+   20. AddInhousePartController.java, line 45-58, Added in validation to check if the inventory is between the minInv and maxInv values
+   21. AddOutsourcedPartController.java, line 43-56   , Added in validation to check if the inventory is between the minInv and maxInv values

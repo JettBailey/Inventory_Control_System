@@ -20,3 +20,23 @@ D - Add an “About” page to the application to describe your chosen customer�
     6. AboutUsController, lines 7-15, added in the correct mapping to call about.html
     7. about.html, line 8, added in th:href that redirects to home page
     8. mainscreen.html, line 17, added in th:href that redirects to the about page
+
+E - Add a sample inventory appropriate for your chosen store to the application.
+You should have five parts and five products in your sample inventory and should not overwrite existing data in the database.
+
+    1. BootStrapData.java, line 42 & 57, removed comments (/*, */)
+    2. BootStrapData.java, line 43, Changed the new OutsourcedPart to "DoorKnob"
+    3. BootStrapData.java, line 44, Changed setCompanyName to "Hardware Is Us"
+    4. BootStrapData.java, line 45, Changed setName to "Door Knob"
+    5. BootStrapData.java, line 46, Changed setInv to "25"
+    6. BootStrapData.java, line 47, Changed setPrice to "10.0"
+    7. BootStrapData.java, line 48, Changed setId to "1000"
+    8. BootStrapData.java, line 49, Changed save to "DoorKnob"
+    9. BootStrapData.java, line 51-57, Created part "hinge"
+    10. BootStrapData.java, line 59-65, Created part "dowel"
+    11. BootStrapData.java, line 67-73, Created part "handle"
+    12. BootStrapData.java, line 78-74, Created part "plank"
+    13. BootStrapData.java, line 76-86, Adjusted if statement to work with the five created parts
+    14. BootStrapData.java, line 95 & 100, Uncommented lines 95 & 100
+    15. BootStrapData.java, line 97 & 106, Added 5 new products and saved the new products
+    16. BootStrapData.java, line 90, Removed second declaration of outsourcedParts

@@ -40,3 +40,16 @@ You should have five parts and five products in your sample inventory and should
     14. BootStrapData.java, line 95 & 100, Uncommented lines 95 & 100
     15. BootStrapData.java, line 97 & 106, Added 5 new products and saved the new products
     16. BootStrapData.java, line 90, Removed second declaration of outsourcedParts
+
+F. Add a “Buy Now” button to your product list. Your “Buy Now” button must meet each of the following parameters:
+   •  The “Buy Now” button must be next to the buttons that update and delete products.
+   •  The button should decrement the inventory of that product by one. It should not affect the inventory of any of the associated parts.
+   •  Display a message that indicates the success or failure of a purchase.
+
+   1. BootStrapJava.java, line 36-106, added comments to not get duplicate parts/products on every run of DemoApplication
+   2. mainscreen.html, line 86, added in a "Buy Now" button
+   3. mainscreen.html, line 86, Changed the button to a form after realizing a POST request is required to modify inventory count
+   4. MainScreenController.java, line 61-74, added in PostMapping buyProduct that decreased the inventory by 1 for every "purchase" and then displays a message
+   5. mainscreen.html, line 94, Added in the code that will display the message after the "Buy Now" button is pressed
+   6. MainScreenController.java, line 70 & 73, adding in a status status that will allow me to have the successful purchase be green and a failure be red
+   7. mainscreen.html, line 94-111, Added in a css class that will make the status message green or red depending on what the status message from the controller is

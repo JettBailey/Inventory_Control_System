@@ -10,7 +10,12 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import java.net.URLEncoder;
+import java.nio.charset.StandardCharsets;
 import java.util.List;
 
 /**
@@ -51,5 +56,22 @@ public class MainScreenControllerr {
         theModel.addAttribute("products", productList);
         theModel.addAttribute("productkeyword",productkeyword);
         return "mainscreen";
+    }
+
+@PostMapping("/buyProduct")
+    public String buyProduct(@RequestParam("productID") int productID, RedirectAttributes redirectAttributes){
+        Product product = productService.findById(productID);
+
+        if (product.getInv() > 0) {
+            product.setInv(product.getInv() - 1);
+            productService.save(product);
+
+            redirectAttributes.addFlashAttribute("message", "This product has been purchased!");
+            redirectAttributes.addFlashAttribute("status", "success");
+        } else {
+            redirectAttributes.addFlashAttribute("message", "This product is out of stock!");
+            redirectAttributes.addFlashAttribute("status", "failure");
+        }
+    return "redirect:/mainscreen";
     }
 }

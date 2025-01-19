@@ -33,7 +33,7 @@ public class BootStrapData implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
 
-
+/*
         OutsourcedPart DoorKnob= new OutsourcedPart();
         DoorKnob.setCompanyName("Hardware Is Us");
         DoorKnob.setName("Door Knob");
@@ -103,7 +103,7 @@ public class BootStrapData implements CommandLineRunner {
         productRepository.save(table);
         productRepository.save(shelf);
         productRepository.save(door);
-
+*/
 
         System.out.println("Started in Bootstrap");
         System.out.println("Number of Products"+productRepository.count());

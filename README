@@ -93,3 +93,8 @@ H. Add validation for between or at the maximum and minimum fields. The validati
    3. EnufPartsValidator.java, line 37, Added a variable inventoryChange that decrements the associated parts by 1
    4. EnufPartsValidator.java, line 40, Changed the if statement to decrement by inventoryChange
    5. ValidEnufParts.java, line 20, Made the error message less generic
+
+I. Add at least two unit tests for the maximum and minimum fields to the PartTest class in the test package.
+
+1. PartTest.java, line 160-167, Added in test for minimumInventory
+2. PartTest.java, line 169-176, Added in test for maximumInventory

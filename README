@@ -98,3 +98,7 @@ I. Add at least two unit tests for the maximum and minimum fields to the PartTes
 
 1. PartTest.java, line 160-167, Added in test for minimumInventory
 2. PartTest.java, line 169-176, Added in test for maximumInventory
+
+J. Remove the class files for any unused validators in order to clean your code.
+
+1. DeletePartValidator.java, file, removed this file as it is not being used
